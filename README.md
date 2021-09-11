@@ -3,5 +3,5 @@
 ## Project Documentation
 ### [Definition](https://github.com/Sanexi/tira-harjoitustyo/blob/main/documentation/definition.md)
 
-### Weekly goals
-* [Week 1](https://github.com/Sanexi/tira-harjoitustyo/blob/main/documentation/week1.md)
+### Weekly Reports
+* [Weekly Report 1](https://github.com/Sanexi/tira-harjoitustyo/blob/main/documentation/weekly_report1.md)
