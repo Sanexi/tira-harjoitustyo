@@ -2,4 +2,8 @@ bin.txt
 .env
 __pycache__
 venv
-
+.vscode
+.DS_Store
+.coverage
+.pytest_cache
+htmlcov
