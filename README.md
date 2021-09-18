@@ -5,3 +5,4 @@
 
 ### Weekly Reports
 * [Weekly Report 1](https://github.com/Sanexi/tira-harjoitustyo/blob/main/documentation/weekly_report1.md)
+* [Weekly Report 2](https://github.com/Sanexi/tira-harjoitustyo/blob/main/documentation/weekly_report2.md)
