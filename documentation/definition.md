@@ -24,4 +24,3 @@ The program will output if the user has won or lost against the program.
 * https://towardsdatascience.com/building-a-rock-paper-scissors-ai-948ec424132f
 * https://learnopencv.com/playing-rock-paper-scissors-with-ai/
 * https://colab.research.google.com/github/trekhleb/machine-learning-experiments/blob/master/experiments/rock_paper_scissors_cnn/rock_paper_scissors_cnn.ipynb
-* (pytest) https://sites.uclouvain.be/P2SINF/flask/testing.html
