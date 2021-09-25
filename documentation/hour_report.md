@@ -11,4 +11,8 @@ date  | hours | week | task  |
 18.9. | 5     |      | Creating the first iteration of the AI to react to players choices, more testing |
 18.9. | 1     |      | Weekly report, documentation |
 |     |       |      |       |
-Total | 5     |      |       |
+24.9. | 4     | 3    | Research, creating more classes (ensembler) |
+25.9. | 4     |      | Creating a scoring system for the ensembler, creating tests for all the new code |
+25.9. | 1     |      | Weekly report, documentation |
+|     |       |      |       |
+Total | 29    |      |       |
