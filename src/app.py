@@ -296,16 +296,3 @@ while True:
     print(ai.get_models())
     print("")
 '''
-
-"""
-for later use:
-
-from flask import Flask
-
-app = Flask(__name__)
-
-
-@app.route("/")
-def index():
-    return "Heipparallaa!"
-"""
