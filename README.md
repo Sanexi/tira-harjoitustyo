@@ -23,6 +23,7 @@ invoke test
 ```bash
 invoke coverage-report
 ```
+Coverage-report can be found from htmlcov/index.html
 ### 4. To test the code quality use the following:
 ```bash
 invoke pylint
