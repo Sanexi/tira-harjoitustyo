@@ -3,6 +3,7 @@ Flask==1.1.2
 py==1.10.0
 pycodestyle==2.7.0
 pylint==2.6.0
+pytest==6.2.2
 python-dotenv==0.16.0
 requests==2.25.1
 cowsay==3.0
