@@ -15,10 +15,7 @@ invoke coverage-report
 ```
 Coverage-report can be found from htmlcov/index.html
 
-## Week 3 coverage report
-![week3coverage](https://github.com/Sanexi/tira-harjoitustyo/blob/main/documentation/images/week3coverage.JPG)
-
-## Week 4 coverage report
+## Coverage report
 ![week4coverage](https://github.com/Sanexi/tira-harjoitustyo/blob/main/documentation/images/week4coverage.JPG)
 
 No performance testing as of yet.
