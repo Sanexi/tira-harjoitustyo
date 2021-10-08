@@ -15,4 +15,8 @@ date  | hours | week | task  |
 25.9. | 4     |      | Creating a scoring system for the ensembler, creating tests for all the new code |
 25.9. | 1     |      | Weekly report, documentation |
 |     |       |      |       |
-Total | 29    |      |       |
+30.9. | 1     | 4    | Research |
+1.10. | 5     |      | Enhancing scoring system, creating new model for AI, testing |
+1.10. | 1     |      | Weekly report, documentation, How2run for peer-review |
+|     |       |      |       |
+Total | 35    |      |       |
