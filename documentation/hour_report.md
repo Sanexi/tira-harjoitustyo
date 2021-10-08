@@ -19,4 +19,8 @@ date  | hours | week | task  |
 1.10. | 5     |      | Enhancing scoring system, creating new model for AI, testing |
 1.10. | 1     |      | Weekly report, documentation, How2run for peer-review |
 |     |       |      |       |
-Total | 35    |      |       |
+2.10. | 3     | 5    | Cleaning up directory structure |
+8.10. | 6     |      | Creating a web page for the app, porting the app to Heroku |
+8.10. | 1     |      | Weekly report, documentation, How2run for peer-review |
+|     |       |      |       |
+Total | 46    |      |       |
