@@ -1,5 +1,5 @@
 import unittest
-from app import Models, Ensembler, Memory, RPS
+from classes import Models, Ensembler, Memory, RPS
 
 
 class TestModels(unittest.TestCase):
