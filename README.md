@@ -6,7 +6,7 @@ Project is made for bachelor's in computer science at University of Helsinki.
 
 ### 2. Install dependencies:
 ```bash
-pip install requirements.txt
+pip install -r requirements.txt
 ```
 
 ### 3. Running the program:
@@ -28,7 +28,7 @@ invoke coverage-report
 Coverage-report can be found from htmlcov/index.html
 ### 4. Code quality can be checked by:
 ```bash
-invoke pylint
+invoke lint
 ```
 
 ## Project Documentation
@@ -42,3 +42,4 @@ invoke pylint
 * [Weekly Report 3](https://github.com/Sanexi/tira-harjoitustyo/blob/main/documentation/weekly_report3.md)
 * [Weekly Report 4](https://github.com/Sanexi/tira-harjoitustyo/blob/main/documentation/weekly_report4.md)
 * [Weekly Report 5](https://github.com/Sanexi/tira-harjoitustyo/blob/main/documentation/weekly_report5.md)
+* [Weekly Report 6](https://github.com/Sanexi/tira-harjoitustyo/blob/main/documentation/weekly_report6.md)
