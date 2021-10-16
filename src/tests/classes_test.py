@@ -1,4 +1,4 @@
-import unittest
+import unittest, random
 from classes import Models, Ensembler, Memory, RPS
 
 
@@ -106,3 +106,18 @@ class TestRPS(unittest.TestCase):
         self.game.calculate(2)
         result = self.game.calculate(2)[0]
         self.assertTrue(result in (0, 1, 2))
+
+    def test_random_picks(self):
+        '''AI should tie against random picks over a long period'''
+        i=0
+        ai_wins = 0
+        player_wins = 0
+        for i in range(200):
+            pick = random.choice([1, 2, 3])
+            result = self.game.calculate(pick)
+            if result == 1:
+                ai_wins += 1
+            if result == 2:
+                player_wins += 1
+            i += 1
+        self.assertAlmostEqual(ai_wins, player_wins)
