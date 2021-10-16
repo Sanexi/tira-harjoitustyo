@@ -24,7 +24,7 @@ date  | hours | week | task  |
 8.10. | 1     |      | Weekly report, documentation, How2run for peer-review |
 |     |       |      |       |
 16.10.| 2     | 6    | Trying to fix Heroku |
-8.10. | 3     |      | Adding more testing and better UI |
-8.10. | 1     |      | Documentation |
+16.10.| 3     |      | Adding more testing and better UI |
+16.10.| 1     |      | Documentation |
 |     |       |      |       |
 Total | 52    |      |       |
