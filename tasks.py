@@ -2,7 +2,7 @@ from invoke import task
 
 @task
 def start(ctx):
-    ctx.run("py src/app.py")
+    ctx.run("flask start")
 
 @task
 def test(ctx):
