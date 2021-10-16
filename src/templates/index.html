@@ -4,37 +4,9 @@
 <b>
     <p>A Markov chain based AI project for bachelor's in computer science at University of Helsinki.</p>
     <br>
-    <div class="rpspicks">
-        <form action="/rock" method="POST">
-            <input type="submit" value="Rock">
-        </form>
-
-        <form action="/paper" method="POST">
-            <input type="submit" value="Paper">
-        </form>
-
-        <form action="/scissors" method="POST">
-            <input type="submit" value="Scissors">
-        </form>
-    </div>
+        <form action="/reset" method="POST">
+            <input type="submit" value="Start">
     <br>
-    {% if output %}
-        {% if output[0] == 0 %}
-        <p>It's a tie!</p>
-        {% elif output[0] == 1 %}
-        <p>AI wins!</p>
-        {% elif output[0] == 2 %}
-        <p>Player wins!</p>
-        {% endif %}
-    {% else %}
-        <p>Choose your pick above</p>
-    {% endif %}
-    <h3>Total score:</h3>
-    <p>Wins: {{ score[2] }}  Ties: {{ score[0] }}  Losses: {{ score[1] }}</p>
-    <br>
-    <form action="/reset" method="POST">
-        <input type="submit" value="Reset">
-    </form>
 </b>
 <br>
 
