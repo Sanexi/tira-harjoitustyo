@@ -165,7 +165,7 @@ class Ensembler:
                 if freq > counter:
                     counter = freq
                     model = i
-            print("Model used", model)
+            #print("Model used", model)
             pick = model_pick[model]
 
         self.round += 1
