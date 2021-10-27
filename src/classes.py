@@ -73,7 +73,40 @@ class Models:
         m3_pick = last[-1][0]-1
         return m3_pick
 
-    # TODO: Least frequent model: beat players least frequent pick
+    def model_4(self):
+        '''Model 4: Frequency model. Player tends to pick the same pick most of the time.'''
+        last = self.memory.get_result()
+        player_picks = []
+        for i in last:
+            player_picks.append(i[0])
+        most_freq = max(player_picks, key=player_picks.count)
+        if most_freq == 3:
+            m4_pick = 1
+        else:
+            m4_pick = most_freq + 1
+        return m4_pick
+
+    def model_5(self):
+        '''Model 5: Least frequent model. Player tends to picks the least frequent pick.'''
+        last = self.memory.get_result()
+        player_picks = []
+
+        for i in last:
+            player_picks.append(i[0])
+        if 1 not in player_picks:
+            least_freq = 1
+        elif 2 not in player_picks:
+            least_freq = 2
+        elif 3 not in player_picks:
+            least_freq = 3
+        else:
+            least_freq = min(player_picks, key=player_picks.count)
+
+        if least_freq == 3:
+            m5_pick = 1
+        else:
+            m5_pick = least_freq + 1
+        return m5_pick
 
     def get_models(self):
         '''Returns all modelpicks to the Ensembler'''
@@ -84,7 +117,9 @@ class Models:
         m1_pick = self.model_1()
         m2_pick = self.model_2()
         m3_pick = self.model_3()
-        return (m0_pick, m1_pick, m2_pick, m3_pick)
+        m4_pick = self.model_4()
+        m5_pick = self.model_5()
+        return (m0_pick, m1_pick, m2_pick, m3_pick, m4_pick, m5_pick)
 
 
 class Ensembler:
@@ -114,9 +149,22 @@ class Ensembler:
             pick = model_pick[0]
         else:
             scores = self.get_score()
-            model = scores.index(max(scores))
-            # print("Model used", model)
+
+            #Checking if all max scoring models agree on the pick
+            occurrences = lambda s, lst: (i for i,e in enumerate(lst) if e == s)
+            indexes = list(occurrences(max(scores), scores))
+            counter = 0
+            best_picks = []
+            for i in indexes:
+                best_picks.append(model_pick[i])
+            for i in indexes:
+                freq = best_picks.count(model_pick[i])
+                if freq > counter:
+                    counter = freq
+                    model = i
+            print("Model used", model)
             pick = model_pick[model]
+
         self.round += 1
         return pick
 
@@ -129,7 +177,7 @@ class Ensembler:
             player_pick: What player picked this round. Compares this to models' picks.
         '''
 
-        this_round = [0, 0, 0, 0]
+        this_round = [0, 0, 0, 0, 0, 0]
         model_pick = self.models.get_models()
         if player_pick == 3:
             correct_pick = 1
@@ -144,7 +192,7 @@ class Ensembler:
                 this_round[ind] -= 1
             ind += 1
 
-        if len(self.scores) == 5:
+        if len(self.scores) == 6:
             self.scores.pop(0)
         self.scores.append(this_round)
 
@@ -156,12 +204,16 @@ class Ensembler:
         m1_score = 0
         m2_score = 0
         m3_score = 0
+        m4_score = 0
+        m5_score = 0
         for i in self.scores:
             m0_score += i[0]
             m1_score += i[1]
             m2_score += i[2]
             m3_score += i[3]
-        return [m0_score, m1_score, m2_score, m3_score]
+            m4_score += i[4]
+            m5_score += i[5]
+        return [m0_score, m1_score, m2_score, m3_score, m4_score, m5_score]
 
 
 class Memory:
@@ -251,3 +303,46 @@ class RPS:
         # AI wins:
         if player_pick == 1 and ai_pick == 3 or player_pick == ai_pick+1:
             return 2
+
+
+#Temporary system to run the game on the console:
+mem = Memory()
+ai = Models(mem)
+ensembler = Ensembler(ai)
+machine = RPS(ensembler, mem)
+print("1 = Rock")
+print("2 = Paper")
+print("3 = Scissors")
+print("0 = Exit")
+player_wins = 0
+ai_wins = 0
+ties = 0
+
+while True:
+    player_pick = int(input(""))
+    if player_pick == 0: break
+
+    result = machine.calculate(player_pick)
+    if result[0] == 0:
+        print("It's a tie!")
+        ties += 1
+    if result[0] == 1:
+        print("AI wins!")
+        ai_wins += 1
+    if result[0] == 2:
+        print("You win!")
+        player_wins += 1
+
+    if result[1] == 1:
+        print("AI's pick: Rock")
+    if result[1] == 2:
+        print("AI's pick: Paper")
+    if result[1] == 3:
+        print("AI's pick: Scissors")
+
+
+
+    print(f"Total: W:{player_wins} T:{ties} L:{ai_wins}")
+    print(ensembler.get_score())
+    print(ai.get_models())
+    print("")
