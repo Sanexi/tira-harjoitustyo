@@ -108,6 +108,8 @@ class Models:
             m5_pick = least_freq + 1
         return m5_pick
 
+    #TODO: Model 6: Model to detect patterns in the last 6 rounds (mainly 3+3 rounds played in the same way).
+
     def get_models(self):
         '''Returns all modelpicks to the Ensembler'''
         last = self.memory.get_result()
@@ -140,6 +142,7 @@ class Ensembler:
     def pick(self):
         '''Decides which model the Ensembler should pick.
         First round plays random, otherwise checks the scores of different models.
+        If many max scores, pick the highest picked.
 
         Returns:
             Ensembler's pick
@@ -295,11 +298,9 @@ class RPS:
         # Ties:
         if player_pick == ai_pick:
             return 0
-
         # AI wins:
         if player_pick == 3 and ai_pick == 1 or player_pick == ai_pick-1:
             return 1
-
         # AI wins:
         if player_pick == 1 and ai_pick == 3 or player_pick == ai_pick+1:
             return 2
