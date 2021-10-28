@@ -13,6 +13,7 @@ def index():
 @app.route("/reset", methods=["POST"])
 def reset():
     Data.game = Constructor()
+    Data.result = None
     return redirect("/rps")
 
 @app.route("/rps")
