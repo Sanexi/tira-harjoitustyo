@@ -27,4 +27,8 @@ date  | hours | week | task  |
 16.10.| 3     |      | Adding more testing and better UI |
 16.10.| 1     |      | Documentation |
 |     |       |      |       |
-Total | 52    |      |       |
+26.10.| 2     | 7 & 8| Fixing Heroku |
+27.10.| 5     |      | Adding 2 more models |
+29.10.| 2     |      | End of project documentation and finishing up |
+|     |       |      |       |
+Total | 61    |      |       |
