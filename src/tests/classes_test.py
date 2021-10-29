@@ -2,7 +2,6 @@ import unittest
 import random
 from classes import Models, Ensembler, Memory, RPS
 
-
 class TestModels(unittest.TestCase):
     def setUp(self):
         self.mem = Memory()

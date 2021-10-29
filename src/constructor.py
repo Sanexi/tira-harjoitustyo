@@ -1,6 +1,5 @@
 from classes import Models, Ensembler, Memory, RPS
 
-
 class Constructor:
     def __init__(self):
         self.mem = Memory()
