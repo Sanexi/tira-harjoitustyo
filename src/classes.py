@@ -108,7 +108,8 @@ class Models:
             m5_pick = least_freq + 1
         return m5_pick
 
-    #TODO: Model 6: Model to detect patterns in the last 6 rounds (mainly 3+3 rounds played in the same way).
+    # TODO: Model 6: Model to detect patterns in the last 6 rounds
+    # (mainly 3+3 rounds played in the same way).
 
     def get_models(self):
         '''Returns all modelpicks to the Ensembler'''
@@ -153,8 +154,9 @@ class Ensembler:
         else:
             scores = self.get_score()
 
-            #Checking if all max scoring models agree on the pick
-            occurrences = lambda s, lst: (i for i,e in enumerate(lst) if e == s)
+            # Checking if all max scoring models agree on the pick
+            def occurrences(s, lst):
+                return (i for i, e in enumerate(lst) if e == s)
             indexes = list(occurrences(max(scores), scores))
             counter = 0
             best_picks = []

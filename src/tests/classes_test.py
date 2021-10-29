@@ -1,4 +1,5 @@
-import unittest, random
+import unittest
+import random
 from classes import Models, Ensembler, Memory, RPS
 
 
@@ -14,7 +15,7 @@ class TestModels(unittest.TestCase):
         self.game.calculate(1)
         self.game.calculate(1)
         output = self.models.get_models()
-        self.assertEqual(output, (3, 2, 1, 3))
+        self.assertEqual(output, (3, 2, 1, 3, 2, 3))
 
 
 class TestEnsembler(unittest.TestCase):
@@ -109,7 +110,7 @@ class TestRPS(unittest.TestCase):
 
     def test_random_picks(self):
         '''AI should tie against random picks over a long period'''
-        i=0
+        i = 0
         ai_wins = 0
         player_wins = 0
         for i in range(200):

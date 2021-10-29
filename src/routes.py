@@ -1,6 +1,6 @@
 from app import app
 from constructor import Constructor
-from flask import redirect, render_template, request, session, abort
+from flask import redirect, render_template
 
 class Data:
     result = None

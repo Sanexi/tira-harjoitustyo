@@ -1,10 +1,6 @@
 from invoke import task
 
 @task
-def start(ctx):
-    ctx.run("flask start")
-
-@task
 def test(ctx):
     ctx.run("pytest src")
 
