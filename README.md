@@ -1,40 +1,15 @@
 # RPS AI using Markov Chains
 Project is made for bachelor's in computer science at University of Helsinki.
 
-## How 2 run
-### 1. Clone the project or download & extract with ZIP
+This program is a rock-paper-scissors game where you compete against an AI that will try to learn your strategy and will use that knowledge to defeat you using Markov Chains. It has 6 different models trained to defeat most common player strategies. These different models play every round and the best scoring model in the last 6 rounds will be picked against the player.
 
-### 2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-### 3. Running the program:
-```bash
-flask run
-```
-The app will open locally and can be used in your browser at http://127.0.0.1:5000/
-
-The app is being ported to Heroku but currently unusable: https://tira-rps.herokuapp.com/
-
-### 4. You can also test the code:
-Run tests and coverage-reports using the following
-```bash
-invoke test
-```
-```bash
-invoke coverage-report
-```
-Coverage-report can be found from htmlcov/index.html
-### 4. Code quality can be checked by:
-```bash
-invoke lint
-```
+#### Playable at Heroku: https://tira-rps.herokuapp.com/
 
 ## Project Documentation
-### [Definition](https://github.com/Sanexi/tira-harjoitustyo/blob/main/documentation/definition.md)
-
-### [Testing](https://github.com/Sanexi/tira-harjoitustyo/blob/main/documentation/testing.md)
+* [Definition](https://github.com/Sanexi/tira-harjoitustyo/blob/main/documentation/definition.md)
+* [Implementation](https://github.com/Sanexi/tira-harjoitustyo/blob/main/documentation/implementation.md)
+* [Testing](https://github.com/Sanexi/tira-harjoitustyo/blob/main/documentation/testing.md)
+* [User guide](https://github.com/Sanexi/tira-harjoitustyo/blob/main/documentation/user_guide.md)
 
 ### Weekly Reports
 * [Weekly Report 1](https://github.com/Sanexi/tira-harjoitustyo/blob/main/documentation/weekly_reports/weekly_report1.md)
